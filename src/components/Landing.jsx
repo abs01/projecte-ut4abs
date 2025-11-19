@@ -1,0 +1,23 @@
+import Header from './Header.jsx'
+import Footer from './Footer.jsx'
+import Card from './Card.jsx'
+function Landing() {
+
+  return (
+    <>
+    <Header title="Principal" />
+     <div id="app-container">
+        <Card></Card>
+      <h2>Bienvenido a mi página principal</h2>
+      <p>Esta es la página principal de mi proyecto React.</p>
+      <p>Navega por los enlaces superiores para ver los diferentes proyectos y suscribirte al newsletter.</p>
+
+
+      
+     </div>
+    <Footer />
+    </>
+  )
+}
+
+export default Landing
