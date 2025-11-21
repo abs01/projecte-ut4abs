@@ -1,4 +1,4 @@
-import { checkEmail } from "../utils/checkEMail.js"
+import { CheckEmail } from "../utils/CheckEMail.js"
 import { useState } from "react"
 import { BsNewspaper } from "react-icons/bs";
 
@@ -7,7 +7,7 @@ export default function NewsLetter() {
     const [verified, setVerified] = useState(false);
 
     function sendEmail(){
-         checkEmail(email) && setVerified(true);  
+         CheckEmail(email) && setVerified(true);  
               
     }   
     function handleChange(e){
@@ -25,7 +25,7 @@ export default function NewsLetter() {
         <input type="text" onChange={(e) => handleChange(e)}/>
         <button onClick={() => sendEmail()}>Subscribe</button>  
         
-        {verified &&  <p>Gracias por suscribirte al newsletter! {email.slice(0, email.indexOf("@"))} </p>}      
+        {verified ? <p>Gracias por suscribirte al newsletter! {email.slice(0, email.indexOf("@"))} </p>: <p>Introduce un mail válido y dale al botón de suscribirse para contuniar</p>}      
              
              </div>
         </>

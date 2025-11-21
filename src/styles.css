@@ -58,7 +58,16 @@ main {
     padding: 20px;
 }
 
-.card {
+.socialMedia{
+  border-bottom: 1px solid hsl(0, 4%, 33%); 
+}
+
+.scrollers{
+display: inline;
+padding: 15px;
+
+}
+ .card {
     border: 1px solid hsl(0, 0%, 80%);
     border-radius: 10px;
     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
@@ -69,7 +78,7 @@ main {
     text-align: center;
 
     max-width: 400px;
-
+    
     display: flex;
     flex-direction: column;    
     justify-content: space-between; 

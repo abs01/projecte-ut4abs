@@ -8,7 +8,7 @@ import Footer from './components/Footer.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Header title="Projectes" />
+    <Header title="Proyectos" />
     <Projectes />
     <Footer />
   </StrictMode>,
