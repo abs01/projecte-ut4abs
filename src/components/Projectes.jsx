@@ -4,7 +4,10 @@ import Card from "./Card.jsx";
 
 export default function Projectes() {
   const [projects, setProjects] = useState([]);
+  const principalRef = useRef(null);
+
   const myRefs = useRef([]);
+
   //Cargar proyectos al cargar página
   useEffect(() => {
     importProjects(setProjects);
@@ -15,6 +18,11 @@ function submitclick(ref){
   console.log(ref)
     ref.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
 }
+function submitclickPrincipal(ref){
+  console.log(ref)
+    ref.current.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+}
+
 
   return (
     /*carrusel con ref
@@ -23,10 +31,11 @@ function submitclick(ref){
    
     <>
       <div id="app-container">
-        <div className="projects-container">
+        <div className="projects-container"  >
           {projects.map((p, i) => (
-            <div key={p.id} className="scrollers">
+            <div key={p.id} className="scrollers"  >
               <button
+                ref={principalRef}
                 id={i}
                 onClick={() => submitclick(myRefs.current[i])}
               >
@@ -48,6 +57,7 @@ function submitclick(ref){
             
           ))}
         </div>
+        <button className="boton-inicio" onClick={() => submitclickPrincipal(principalRef)}>Volver a inicio</button>
       </div>
     </>
   );
