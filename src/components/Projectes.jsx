@@ -41,7 +41,8 @@ function submitclick(ref){
               <Card
                 title={p.name}
                 description={p.description}
-                imageUrl={p.image + "?random=" + p.id}
+                imageUrl={p.image}
+                video={p.video}
               />
             </div>
             
