@@ -11,6 +11,11 @@ img {
   height: auto;
 
 }
+.welcome-container{
+    background-color: white;
+    border-radius: 10px;
+
+}
 /* Make the page use full height and stack header → content → footer */
 body {
     margin: 0;
@@ -30,6 +35,7 @@ body {
 header {
     padding: 10px;
     text-align: center;
+  color: #30b896;
 
     position: sticky;
     border-bottom: 1px solid hsl(0, 0%, 80%);
@@ -59,9 +65,14 @@ main {
 }
 
 .socialMedia{
-  border-bottom: 1px solid hsl(0, 4%, 33%); 
-}
+  background-color: white;
+    border-radius: 10px;
 
+}
+.news-container{
+    background-color: white;
+    border-radius: 10px;
+}
 .scrollers{
 display: inline;
 padding: 15px;
@@ -78,7 +89,7 @@ padding: 15px;
     text-align: center;
 
     max-width: 400px;
-    
+    background-color: white;
     display: flex;
     flex-direction: column;    
     justify-content: space-between; 
@@ -90,6 +101,7 @@ padding: 15px;
     border: 1px solid hsl(0, 0%, 80%);
     border-radius: 10px;
     box-shadow: 5px 5px 5px hsla(0, 0%, 0%, 0.1);
+        background-color: white;
 
     margin-left: auto;
     margin-right: auto;
@@ -133,11 +145,13 @@ padding: 15px;
 
     font-family: Arial, sans-serif;
 
-    color: hsl(0, 0%, 30%);
-
 }
 .boton-inicio {
   bottom: 60px; /* appears above fixed footer */
+  color: black;
   position: sticky;
   opacity: 1;
+}
+footer{
+    color: black;
 }

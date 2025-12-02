@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { importProjects } from "../services/importProjects.js";
 import Card from "./Card.jsx";
+import { AnimatedBackground } from 'animated-backgrounds';
 
 export default function Projectes() {
   const [projects, setProjects] = useState([]);
@@ -30,7 +31,12 @@ function submitclickPrincipal(ref){
     */
    
     <>
-      <div id="app-container">
+    <div>
+<AnimatedBackground 
+  animationName="auroraBorealis"
+  theme="portofolio" // gaming, portfolio, landing, presentation, wellness, party, cyberpunk, retro
+/>
+ <div id="app-container">
         <div className="projects-container"  >
           {projects.map((p, i) => (
             <div key={p.id} className="scrollers"  >
@@ -59,6 +65,8 @@ function submitclickPrincipal(ref){
         </div>
         <button className="boton-inicio" onClick={() => submitclickPrincipal(principalRef)}>Volver a inicio</button>
       </div>
+    </div>
+     
     </>
   );
 }
