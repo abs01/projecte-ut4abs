@@ -40,7 +40,7 @@ export default function NewsLetter() {
           ) : (
             <p>
               Introduce un mail válido y dale al botón de suscribirse para
-              contuniar
+              continuar
             </p>
           )}
         </div>

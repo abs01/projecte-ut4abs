@@ -38,8 +38,9 @@ function submitclickPrincipal(ref){
 />
  <div id="app-container">
         <div className="projects-container"  >
+          <div  className="scrollers"  >
           {projects.map((p, i) => (
-            <div key={p.id} className="scrollers"  >
+          
               <button
                 ref={principalRef}
                 id={i}
@@ -47,8 +48,8 @@ function submitclickPrincipal(ref){
               >
                 {p.name}
               </button>
-            </div>
           ))}
+            </div>
 
           {projects.map((p,i) => (
             
