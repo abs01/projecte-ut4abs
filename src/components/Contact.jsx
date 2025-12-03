@@ -2,8 +2,6 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
-import Header from "./Header";
-import Footer from "./Footer";
 import { AnimatedBackground } from "animated-backgrounds";
 
 export default function Contact() {
@@ -14,7 +12,6 @@ export default function Contact() {
   animationName="auroraBorealis"
   theme="portofolio" // gaming, portfolio, landing, presentation, wellness, party, cyberpunk, retro
 />
-        <Header title="Contáctame :)" />
         <div id="app-container">
           <div className="socialMedia">
                       <h2>Redes Sociales</h2>
@@ -35,7 +32,6 @@ export default function Contact() {
           </div>
           
         </div>
-        <Footer />
       </div>
     </>
   );

@@ -1,5 +1,4 @@
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
+
 import Card from './Card.jsx'
 import profilePic from "../assets/images/Yo.jpg"
 import { useState } from 'react'
@@ -12,7 +11,6 @@ function Landing() {
   animationName="auroraBorealis"
   theme="portofolio" // gaming, portfolio, landing, presentation, wellness, party, cyberpunk, retro
 />
-      <Header title="Principal"  />
      <div id="app-container">
             <div className="presentation_card">
         <Card title={"Este soy yo"} imageUrl={profilePic} description={"Soy un estudiante de DAW, sé Java, Python y estoy estudiando javascript y php"}></Card>
@@ -24,7 +22,6 @@ function Landing() {
      </div>
      
      </div>
-    <Footer />
     </div>
     
     </>
