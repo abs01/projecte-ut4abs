@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { importProjects } from "../services/importProjects.js";
 import Card from "./Card.jsx";
 import { AnimatedBackground } from 'animated-backgrounds';
-
+import { nanoid } from "nanoid";
 export default function Projectes() {
   const [projects, setProjects] = useState([]);
   const principalRef = useRef(null);
@@ -42,6 +42,7 @@ function submitclickPrincipal(ref){
           {projects.map((p, i) => (
           
               <button
+                key={nanoid()}
                 ref={principalRef}
                 id={i}
                 onClick={() => submitclick(myRefs.current[i])}
@@ -53,7 +54,7 @@ function submitclickPrincipal(ref){
 
           {projects.map((p,i) => (
             
-            <div className="card" key={p.id} ref={(el) => (myRefs.current[i] = el)}>
+            <div className="card" key={nanoid()} ref={(el) => (myRefs.current[i] = el)}>
               <Card
                 title={p.name}
                 description={p.description}
