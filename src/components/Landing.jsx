@@ -1,7 +1,6 @@
 
 import Card from './Card.jsx'
 import profilePic from "../assets/images/Yo.jpg"
-import { useState } from 'react'
 import { AnimatedBackground } from 'animated-backgrounds';
 function Landing() {
   return (
@@ -9,7 +8,6 @@ function Landing() {
      <div>
 <AnimatedBackground 
   animationName="auroraBorealis"
-  theme="portofolio" // gaming, portfolio, landing, presentation, wellness, party, cyberpunk, retro
 />
      <div id="app-container">
             <div className="presentation_card">

@@ -8,8 +8,7 @@ function App() {
 
   return (
     <>
-          <Header title="Principal"  />
-
+          <Header title="Principal"/>
       <Landing />
           <Footer />
 

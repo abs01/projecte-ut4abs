@@ -1,4 +1,4 @@
-import { CheckEmail } from "../utils/CheckEMail.js";
+import { CheckEmail } from "../utils/checkEmail";
 import { useState } from "react";
 import { BsNewspaper } from "react-icons/bs";
 import { AnimatedBackground } from "animated-backgrounds";
