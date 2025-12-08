@@ -57,7 +57,6 @@ function submitclickPrincipal(ref){
             <div className="card" key={nanoid()} ref={(el) => (myRefs.current[i] = el)}>
               <Card
                 {...p}
-                imageUrl={p.image}
               />
             </div>
             
