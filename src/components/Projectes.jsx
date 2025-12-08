@@ -47,7 +47,7 @@ function submitclickPrincipal(ref){
                 id={i}
                 onClick={() => submitclick(myRefs.current[i])}
               >
-                {p.name}
+                {p.title}
               </button>
           ))}
             </div>
