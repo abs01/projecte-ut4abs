@@ -11,7 +11,7 @@ function Landing() {
 />
      <div id="app-container">
             <div className="presentation_card">
-        <Card title={"Este soy yo"} imageUrl={profilePic} description={"Soy un estudiante de DAW, sé Java, Python y estoy estudiando javascript y php"}></Card>
+        <Card title={"Este soy yo"} image={profilePic} description={"Soy un estudiante de DAW, sé Java, Python y estoy estudiando javascript y php"}></Card>
             </div>
      <div className='welcome-container'>
  <h2>Bienvenido a mi página principal</h2>
