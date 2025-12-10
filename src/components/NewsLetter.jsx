@@ -19,7 +19,7 @@ export default function NewsLetter() {
   function capitalizeFirstLetter(val) {
     return String(val).charAt(0).toUpperCase() + String(val).slice(1);
 }
-
+  //En effects que esté en el interior + la dependencia
   useEffect(() => setName(capitalizeFirstLetter(email.slice(0, email.indexOf("@")))),[verified])
 
 
@@ -66,7 +66,7 @@ export default function NewsLetter() {
     } 
         //a la hora de cargar la página hay que tener algo de paciencia con lso picsum, tardan lo suyo
 
-    image={"https://picsum.photos/seed/noticia1/300/300"} 
+    image={"https://picsum.photos/300/300/?random=1"} 
   />
 </div>
 
@@ -78,7 +78,8 @@ export default function NewsLetter() {
       name + 
       ", queremos informarte que hemos lanzado nuevas funciones dentro de la plataforma para mejorar tu experiencia de usuario. Ahora podrás acceder a contenido más rápido, con una interfaz más sencilla y herramientas mejoradas."
     } 
-    image={"https://picsum.photos/seed/noticia2/300/300"} 
+    
+    image={"https://picsum.photos/300/300/?random=2"} 
   />
 </div>
 
@@ -89,7 +90,7 @@ export default function NewsLetter() {
       name + 
       ", este es un pequeño recordatorio para que revises tu perfil y completes tu información personal. Mantener tus datos actualizados te permitirá recibir noticias más precisas y aprovechar al máximo todas nuestras funcionalidades."
     } 
-    image={"https://picsum.photos/seed/noticia3/300/300"} 
+    image={"https://picsum.photos/300/300/?random=3"} 
   />
 </div>
 
