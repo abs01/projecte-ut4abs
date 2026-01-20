@@ -1,14 +1,13 @@
 import "./App.css";
 import "./styles.css";
-import Landing from "./components/Landing";
-import Footer from "./components/Footer";
+
 import Header from "./components/Header";
+
 function App() {
   return (
     <>
-      <Header title="Principal" />
-      <Landing />
-      <Footer />
+      <Header title="Principal" />   
+         {/* NO HACE FALTA PONER LANDING YA QUE ESTA EN LA RUTA POR DEFECTO EN / */}
     </>
   );
 }
