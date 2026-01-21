@@ -1,5 +1,6 @@
 import {Link} from "react-router-dom";
 import { useLocation } from "react-router-dom";
+import { capitalizeFirstLetter } from "../App";
 export default function Header() {
       const location = useLocation();
 
@@ -7,18 +8,7 @@ export default function Header() {
     
     <>
       <header>
-        <h1>
-          {location.pathname === "/"
-            ? "Principal"
-            : location.pathname === "/projectes"
-              ? "Projectes"
-              : location.pathname === "/news"
-                ? "News"
-                : location.pathname === "/contact" && "Contacte"}
-        </h1>
-
-
-
+        <h1>{location.pathname != "/"? capitalizeFirstLetter(location.pathname.slice(1)): "Principal"}</h1>
 
         <Link to="/" className={location.pathname === "/" ? "activate" : ""}>
           Pagina principal

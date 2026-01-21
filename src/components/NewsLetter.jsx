@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import { CheckEmail } from "../utils/CheckEMail";
-=======
-import { CheckEmail } from "../utils/checkEMail";
->>>>>>> dc41ea23ce2b1634d8052677ffc477dc659ab993
 import { useEffect, useState } from "react";
 import { BsNewspaper } from "react-icons/bs";
 import { AnimatedBackground } from "animated-backgrounds";
 import Card from "./Card";
+import { capitalizeFirstLetter } from "../App";
 export default function NewsLetter() {
   const [email, setEmail] = useState("");
   const [verified, setVerified] = useState(false);
@@ -20,9 +17,7 @@ export default function NewsLetter() {
     setEmail(e.target.value);
   }
   //https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
-  function capitalizeFirstLetter(val) {
-    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
-  }
+  
   //En effects que esté en el interior + la dependencia
   useEffect(
     () => setName(capitalizeFirstLetter(email.slice(0, email.indexOf("@")))),

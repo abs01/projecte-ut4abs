@@ -13,6 +13,9 @@ import {
     useLocation
 } from "react-router-dom";
 
+  export function capitalizeFirstLetter(val) {
+    return String(val).charAt(0).toUpperCase() + String(val).slice(1);
+  }
 
 function App() {
   return (
