@@ -4,6 +4,10 @@
     margin: 0 auto;
     text-align: center;
 }
+.activate {
+    font-weight: bold;
+    color: red;
+}
 
 img {
     max-width: 100%;

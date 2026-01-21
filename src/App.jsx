@@ -15,12 +15,10 @@ import {
 
 
 function App() {
-    const location = useLocation();
-    const [page, setPage] = useState(location.pathname);
   return (
     <>
 
-      <Header page={page} setPage={setPage} />   
+      <Header  />   
          <Routes>
           <Route path="/" element={<Landing/>} />
           <Route path="/projectes" element={<Projectes />} />

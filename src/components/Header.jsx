@@ -1,39 +1,40 @@
-import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+import {Link} from "react-router-dom";
+import { useLocation } from "react-router-dom";
+export default function Header() {
+      const location = useLocation();
 
-export default function Header({ page, setPage }) {
   return (
+    
     <>
       <header>
         <h1>
-          {page === "/"
+          {location.pathname === "/"
             ? "Principal"
-            : page === "/projectes"
+            : location.pathname === "/projectes"
               ? "Projectes"
-              : page === "/news"
+              : location.pathname === "/news"
                 ? "News"
-                : page === "/contact" && "Contacte"}
+                : location.pathname === "/contact" && "Contacte"}
         </h1>
 
 
 
 
-        <Link to="/" onClick={() => setPage("/")}>
+        <Link to="/" className={location.pathname === "/" ? "activate" : ""}>
           Pagina principal
         </Link>{" "}
         |
-        <Link to="/projectes" onClick={() => setPage("/projectes")}>
+        <Link to="/projectes" className={location.pathname === "/projectes" ? "activate" : ""}>
           Projectes
         </Link>{" "}
         |
-        <Link to="/news" onClick={() => setPage("/news")}>
+        <Link to="/news" className={location.pathname === "/news" ? "activate" : ""}>
           News
         </Link>{" "}
         |
-        <Link to="/contact" onClick={() => setPage("/contact")}>
+        <Link to="/contact" className={location.pathname === "/contact" ? "activate" : ""}>
           Contacte
         </Link>
-        <h1></h1>
-        <nav></nav>
       </header>
     </>
   );
