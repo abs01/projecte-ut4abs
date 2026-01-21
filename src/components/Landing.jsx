@@ -1,9 +1,11 @@
 import Card from "./Card.jsx";
 import profilePic from "../assets/images/Yo.jpg";
+import Header from "./Header.jsx";
 import { AnimatedBackground } from "animated-backgrounds";
 function Landing() {
   return (
     <>
+    
       <div>
         <AnimatedBackground animationName="auroraBorealis" />
         <div id="app-container">

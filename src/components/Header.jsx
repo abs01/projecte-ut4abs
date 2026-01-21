@@ -1,46 +1,40 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Projectes from './Projectes';
-import Landing from './Landing';
-import NewsLetter from './NewsLetter';
-import Contact from './Contact';
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 
-export default function Header({ title }) {
+export default function Header({ page, setPage }) {
   return (
     <>
-
-      <BrowserRouter>
- <header>
-        <h1>{title}</h1>
-        <nav>
-
-          
-        <Link to="/">Pagina principal</Link> | 
-        <Link to="/projectes">Projectes</Link> |
-        <Link to="/news">News</Link> |
-        <Link to="/contact">Contacte</Link>
-
-
-   
+      <header>
+        <h1>
+          {page === "/"
+            ? "Principal"
+            : page === "/projectes"
+              ? "Projectes"
+              : page === "/news"
+                ? "News"
+                : page === "/contact" && "Contacte"}
+        </h1>
 
 
-       
-        </nav>
+
+
+        <Link to="/" onClick={() => setPage("/")}>
+          Pagina principal
+        </Link>{" "}
+        |
+        <Link to="/projectes" onClick={() => setPage("/projectes")}>
+          Projectes
+        </Link>{" "}
+        |
+        <Link to="/news" onClick={() => setPage("/news")}>
+          News
+        </Link>{" "}
+        |
+        <Link to="/contact" onClick={() => setPage("/contact")}>
+          Contacte
+        </Link>
+        <h1></h1>
+        <nav></nav>
       </header>
-   <Routes>
-          <Route path="/" element={<Landing/>} />
-          <Route path="/projectes" element={<Projectes />} />
-          <Route path="/news" element={<NewsLetter />} />
-          <Route path="/contact" element={<Contact />} />
-
-        </Routes>
-
-    </BrowserRouter>
-
-
-
-      
-           
-
     </>
   );
 }

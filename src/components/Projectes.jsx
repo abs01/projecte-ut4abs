@@ -33,6 +33,7 @@ export default function Projectes() {
     */
 
     <>
+    
       <div>
         <AnimatedBackground
           animationName="auroraBorealis"
