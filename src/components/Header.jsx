@@ -1,18 +1,16 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { capitalizeFirstLetter } from "../App";
 import { NavLink } from "react-router-dom";
 export default function Header() {
-  const location = useLocation();
+      const location = useLocation();
 
   return (
+    
     <>
       <header>
-        <h1>
-          {location.pathname != "/"
-            ? capitalizeFirstLetter(location.pathname.slice(1))
-            : "Principal"}
-        </h1>
+        {/* <h1>{location.pathname != "/" ? capitalizeFirstLetter(location.pathname.slice(1)): "Principal"}</h1> */}
+
         {/* <Link to="/" className={location.pathname === "/" ? "active" : ""}>
           Pagina principal
         </Link>{" "}
@@ -29,33 +27,25 @@ export default function Header() {
           Contacte
         </Link>
          */}
-        <NavLink
-          to="/"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
+        
+        
+        <NavLink to="/" className={({isActive})=>isActive?"active":""}>
           Pagina principal
         </NavLink>{" "}
         |
-        <NavLink
-          to="/projectes"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
+        <NavLink to="/projectes" className={({isActive})=>isActive?"active":""}>
           Projectes
-        </NavLink>{" "}
-        |
-        <NavLink
-          to="/news"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
-          News
-        </NavLink>{" "}
-        |
-        <NavLink
-          to="/contact"
-          className={({ isActive }) => (isActive ? "active" : "")}
-        >
+        </NavLink>{" "}|
+        <NavLink to="/news" className={({isActive})=>isActive?"active":""}>
+          News  
+        </NavLink>{" "}|
+        <NavLink to="/contact" className={({isActive})=>isActive?"active":""}>
           Contacte
         </NavLink>
+
+        
+
+
       </header>
     </>
   );

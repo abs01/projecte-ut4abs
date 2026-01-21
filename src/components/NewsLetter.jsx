@@ -4,7 +4,7 @@ import { BsNewspaper } from "react-icons/bs";
 import { AnimatedBackground } from "animated-backgrounds";
 import Card from "./Card";
 import { capitalizeFirstLetter } from "../App";
-export default function NewsLetter() {
+export default function NewsLetter({title}) {
   const [email, setEmail] = useState("");
   const [verified, setVerified] = useState(false);
   const [name, setName] = useState("");
@@ -26,6 +26,7 @@ export default function NewsLetter() {
 
   return (
     <>
+    <h1>{title}</h1>
       <div>
         <AnimatedBackground
           animationName="auroraBorealis"

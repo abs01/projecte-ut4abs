@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { importProjects } from "../services/importProjects.js";
 import Card from "./Card.jsx";
 import { AnimatedBackground } from "animated-backgrounds";
-export default function Projectes() {
+export default function Projectes({title}) {
   const [projects, setProjects] = useState([]);
   const principalRef = useRef(null);
 
@@ -32,7 +32,7 @@ export default function Projectes() {
     */
 
     <>
-    
+    <h1>{title}</h1>
       <div>
         <AnimatedBackground
           animationName="auroraBorealis"

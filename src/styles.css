@@ -99,7 +99,12 @@ main {
     margin-right: 10px;
     margin-bottom: 10px;
 }
+h1 {
+ padding: 10px;
+    text-align: center;
+    color: #30b896;
 
+}
 .card {
     border: 1px solid hsl(0, 0%, 80%);
     border-radius: 10px;

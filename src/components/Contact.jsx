@@ -3,9 +3,10 @@ import { FaTwitter } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
 import { AnimatedBackground } from "animated-backgrounds";
-export default function Contact() {
+export default function Contact({title}) {
   return (
     <>
+        <h1>{title}</h1>
         <AnimatedBackground
           animationName="auroraBorealis"
           theme="portofolio" // gaming, portfolio, landing, presentation, wellness, party, cyberpunk, retro
