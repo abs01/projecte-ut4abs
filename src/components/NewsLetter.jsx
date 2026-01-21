@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { CheckEmail } from "../utils/CheckEMail";
+=======
+import { CheckEmail } from "../utils/checkEMail";
+>>>>>>> dc41ea23ce2b1634d8052677ffc477dc659ab993
 import { useEffect, useState } from "react";
 import { BsNewspaper } from "react-icons/bs";
 import { AnimatedBackground } from "animated-backgrounds";
